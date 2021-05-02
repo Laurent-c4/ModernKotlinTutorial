@@ -11,9 +11,9 @@ import kotlinx.android.synthetic.main.item_country.view.*
 class CountryListAdapter(var countries: ArrayList<Country>) :
     RecyclerView.Adapter<CountryListAdapter.CountryViewHolder>() {
 
-    fun swapDataSet(countries: ArrayList<Country>) {
+    fun swapDataSet(countryList: ArrayList<Country>) {
         countries.clear()
-        countries.addAll(countries)
+        countries.addAll(countryList)
         notifyDataSetChanged()
     }
 
