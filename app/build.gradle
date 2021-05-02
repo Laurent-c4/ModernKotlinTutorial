@@ -32,7 +32,7 @@ android {
     }
 }
 
-def lifeCycleExtensionVersion ='1.1.1'
+def lifeCycleExtensionVersion = '1.1.1'
 def retrofitVersion = '2.3.0'
 def daggerVersion = '2.23'
 def glideVersion = '4.8.0'
@@ -59,7 +59,7 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     implementation 'androidx.recyclerview:recyclerview:1.2.0'
-
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
     implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
