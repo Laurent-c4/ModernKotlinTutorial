@@ -1,6 +1,7 @@
 package com.tutorials.countries.di
 
 import com.tutorials.countries.model.CountriesAPI
+import com.tutorials.countries.model.CountriesService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -18,4 +19,7 @@ class ApiModule {
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build().create(CountriesAPI::class.java)
+
+    @Provides
+    fun provideCountriesService() =  CountriesService()
 }
