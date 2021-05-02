@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class CountriesService {
 
-    private val BASE_URL ="http://raw.githubusercontent.com"
+    private val BASE_URL ="https://raw.githubusercontent.com"
     private val api:CountriesAPI
 
     init {

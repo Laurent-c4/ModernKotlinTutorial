@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
                 if (it) {
                     list_error.visibility = View.GONE
                     countries_list.visibility = View.GONE
+                } else {
+                    countries_list.visibility = View.VISIBLE
                 }
             }
         })

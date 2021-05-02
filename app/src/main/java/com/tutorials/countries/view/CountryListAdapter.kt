@@ -34,7 +34,7 @@ class CountryListAdapter(var countries: ArrayList<Country>) :
         private val countryName = view.name
 
         fun bind(country: Country) {
-         countryName.text = country.countryName
+         countryName.text = country.name
         }
     }
 
