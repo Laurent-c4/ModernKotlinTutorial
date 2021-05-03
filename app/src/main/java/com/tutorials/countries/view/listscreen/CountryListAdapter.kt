@@ -1,4 +1,4 @@
-package com.tutorials.countries.view
+package com.tutorials.countries.view.listscreen
 
 import android.view.LayoutInflater
 import android.view.View

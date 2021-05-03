@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/drawable/ic_baseline_flag_24.xml" value="0.2890625" />
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/drawable/ic_feedback.xml" value="0.2890625" />
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/layout/fragment_about.xml" value="0.1" />
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/layout/fragment_countries.xml" value="0.1" />
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/layout/fragment_leaderboard.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/mbogi/StudioProjects/ModernKotlinTutorial/app/src/main/res/menu/bottom_nav.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
