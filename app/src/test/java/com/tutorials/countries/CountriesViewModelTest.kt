@@ -3,7 +3,7 @@ package com.tutorials.countries
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.tutorials.countries.model.CountriesService
 import com.tutorials.countries.model.Country
-import com.tutorials.countries.viewmodel.ListViewModel
+import com.tutorials.countries.viewmodel.CountriesViewModel
 import io.reactivex.Scheduler
 import io.reactivex.Single
 import io.reactivex.android.plugins.RxAndroidPlugins
@@ -16,13 +16,12 @@ import org.junit.Rule
 import org.junit.Test
 import org.mockito.InjectMocks
 import org.mockito.Mock
-import org.mockito.Mockito
 import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
 import java.util.concurrent.Executor
 import java.util.concurrent.TimeUnit
 
-class ListViewModelTest {
+class CountriesViewModelTest {
 
     @get:Rule
     var rule = InstantTaskExecutorRule()
@@ -31,7 +30,7 @@ class ListViewModelTest {
     lateinit var countriesService: CountriesService
 
     @InjectMocks
-    var listViewModel = ListViewModel()
+    var listViewModel = CountriesViewModel()
 
     private var testSingle: Single<ArrayList<Country>>? = null
 

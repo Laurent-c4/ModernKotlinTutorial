@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tutorials.countries.view.listscreen
+package com.tutorials.countries.view.leaderboardscreen
 
 import android.os.Bundle
 import android.view.LayoutInflater

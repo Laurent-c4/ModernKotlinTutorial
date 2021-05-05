@@ -14,48 +14,43 @@
  * limitations under the License.
  */
 
-package com.tutorials.countries.view.listscreen
+package com.tutorials.countries.view.eventsscreen
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.tutorials.countries.R
-import com.tutorials.countries.viewmodel.ListViewModel
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_countries.*
+import com.tutorials.countries.viewmodel.EventsViewModel
 import kotlinx.android.synthetic.main.fragment_countries.view.*
 
 
 /**
- * Shows countries fetched from API.
+ * Shows events fetched from API.
  */
-class Countries : Fragment() {
+class Events : Fragment() {
 
-    lateinit var viewModel: ListViewModel
-    private val countryListAdapter = CountryListAdapter(arrayListOf())
+    lateinit var viewModel: EventsViewModel
+    private val eventListAdapter =
+        EventListAdapter(
+            arrayListOf()
+        )
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_countries, container, false)
+        val view = inflater.inflate(R.layout.fragment_events, container, false)
 
-        viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(EventsViewModel::class.java)
         viewModel.refresh()
 
-        view.countries_list.apply {
+        view.recycler_view.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = countryListAdapter
+            adapter = eventListAdapter
         }
 
         view.swipeRefreshLayout.setOnRefreshListener {
@@ -70,11 +65,11 @@ class Countries : Fragment() {
 
     fun observeViewModel(view: View) {
 
-        viewModel.countries.observe(viewLifecycleOwner, Observer { countries ->
-            countries?.let { countryListAdapter.swapDataSet(it) }
+        viewModel.events.observe(viewLifecycleOwner, Observer { events ->
+            events?.let { eventListAdapter.swapDataSet(it) }
         })
 
-        viewModel.countryLoadError.observe(viewLifecycleOwner, Observer { isError ->
+        viewModel.error.observe(viewLifecycleOwner, Observer { isError ->
             isError?.let { view.list_error.visibility = if (it) View.VISIBLE else View.GONE }
         })
 
@@ -83,9 +78,9 @@ class Countries : Fragment() {
                 view.loading_view.visibility = if (it) View.VISIBLE else View.GONE
                 if (it) {
                     view.list_error.visibility = View.GONE
-                    view.countries_list.visibility = View.GONE
+                    view.recycler_view.visibility = View.GONE
                 } else {
-                    view.countries_list.visibility = View.VISIBLE
+                    view.recycler_view.visibility = View.VISIBLE
                 }
             }
         })

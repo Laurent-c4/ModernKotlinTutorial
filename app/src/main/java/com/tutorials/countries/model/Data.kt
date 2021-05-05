@@ -28,3 +28,5 @@ data class Country(
 //    @SerializedName("translations") val translations: Translations,
 //    @SerializedName("cioc") val cioc: String
 )
+
+data class Event(val name:String = "")

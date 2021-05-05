@@ -11,7 +11,7 @@ import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class ListViewModel : ViewModel() {
+class CountriesViewModel : ViewModel() {
 
     @Inject
     lateinit var countriesService:CountriesService

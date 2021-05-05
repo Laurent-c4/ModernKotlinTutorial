@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tutorials.countries.view.listscreen
+package com.tutorials.countries.view.leaderboardscreen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,7 +23,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.tutorials.countries.R
-import com.tutorials.countries.view.listscreen.MyAdapter.Companion.USERNAME_KEY
+import com.tutorials.countries.view.leaderboardscreen.MyAdapter.Companion.USERNAME_KEY
 
 
 /**

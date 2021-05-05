@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81241789894",
+    "project_id": "bashment-club",
+    "storage_bucket": "bashment-club.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81241789894:android:7b1fb6bc58fbee0f398ec7",
+        "android_client_info": {
+          "package_name": "com.tutorials.countries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81241789894-r427f3ns0c4j3ho6t6f19lhqkcp5ib0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhA9jQEhjU_ZDfxZ2umFPzwU9WaGoibcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81241789894-r427f3ns0c4j3ho6t6f19lhqkcp5ib0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

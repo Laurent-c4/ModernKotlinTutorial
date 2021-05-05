@@ -1,4 +1,4 @@
-package com.tutorials.countries.view.listscreen
+package com.tutorials.countries.view.countriesscreen
 
 import android.view.LayoutInflater
 import android.view.View
@@ -19,11 +19,12 @@ class CountryListAdapter(var countries: ArrayList<Country>) :
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = CountryViewHolder(
-        LayoutInflater.from(parent.context).inflate(
-            R.layout.item_country, parent, false
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        CountryViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.item_country, parent, false
+            )
         )
-    )
 
     override fun getItemCount() = countries.size
 

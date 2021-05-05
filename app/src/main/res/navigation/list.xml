@@ -24,7 +24,7 @@
 
     <fragment
             android:id="@+id/leaderboard"
-            android:name="com.tutorials.countries.view.listscreen.Leaderboard"
+            android:name="com.tutorials.countries.view.leaderboardscreen.Leaderboard"
             android:label="@string/title_list"
             tools:layout="@layout/fragment_leaderboard">
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/userProfile"
-        android:name="com.tutorials.countries.view.listscreen.UserProfile"
+        android:name="com.tutorials.countries.view.leaderboardscreen.UserProfile"
         android:label="@string/title_detail"
         tools:layout="@layout/fragment_user_profile">
         <deepLink
